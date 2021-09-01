@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavBar from "./components/Navbar/NavBar";
+import {Route} from "react-router-dom";
+import Card from "./components/Card/Card";
+import Favorite from "./components/Favorite/Favorite";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    state = {
+        favorites: []
+    }
+
+    addFavorite = favorite => {
+        const {favorites} = this.state;
+
+        if (!favorites.some(alreadyFavorite => alreadyFavorite.id === favorite.id)) {
+            this.setState({
+                favorites: [...this.state.favorites, favorite]
+            });
+        }
+    };
+
+    render() {
+        return (
+            <div className='app-wrapper'>
+                <NavBar/>
+                <Route path="/"
+                       exact render={() => (<Card addFavorite={this.addFavorite}/>)}
+                />
+                <Route path="/favorites"
+                       render={() => <Favorite favorites={this.state.favorites}/>}
+                />
+                <footer>
+                    <h2>CopyRight Pokemon 2021</h2>
+                </footer>
+            </div>
+        );
+    }
 }
 
-export default App;
+export default App

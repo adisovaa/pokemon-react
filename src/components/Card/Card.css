@@ -1,0 +1,112 @@
+.text h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.text p {
+    text-align: center;
+}
+
+.add_card {
+    width: 310px;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+input {
+    width: 97%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: gray;
+}
+
+.btn{
+    width: 50%;
+    height: 40px;
+    background-color: transparent;
+    margin: 25px 0 10px 70px;
+    border: 1px solid #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: gray;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.card {
+    width: 27%;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.wrapper {
+    width: 90%;
+    padding: 16px
+}
+
+.card_name {
+    display: flex;
+}
+
+.card_name h4 {
+    font-weight: 600;
+    margin-left: 55px;
+    font-size: 20px;
+    line-height: 0.5;
+    color: #fff;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.card_img img {
+    width: 170px;
+    height: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-webkit-file-upload-button {
+    border: 1px solid #fff;
+    padding: 0.6em;
+    color: gray;
+}
+
+.widget {
+    display: flex;
+    justify-content: space-between;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+}
+
+svg:hover {
+    color: red;
+}
